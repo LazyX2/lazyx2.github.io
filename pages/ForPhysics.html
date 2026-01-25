@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For 2D Physics</title>
+</head>
+<body>
+    <p>Useful Symbols: Α α, Β β, Γ γ, Δ δ, Ε ε, Ζ ζ, Η η, Θ θ, Ι ι, Κ κ, Λ λ, Μ μ, Ν ν, Ξ ξ, Ο ο, Π π, Ρ ρ, Σ σ ς, Τ τ, Υ υ, Φ φ, Χ χ, Ψ ψ, Ω ω, ∫, √</p>
+    <p>R*g = v<sup>2</sup><sub>0</sub> * sin(2α)</p>
+    <p>J = P - P<sub>0</sub></p>
+    <p>m<sub>1</sub> * v<sub>1</sub> + m<sub>2</sub> * v<sub>2</sub> = m<sub>1</sub> * u<sub>1</sub> + m<sub>2</sub> * u<sub>2</sub></p>
+    <p>W<sub>F</sub> = F * Δx * cosα</p>
+    <p>W<sub>F</sub> = ΔE<sub>k</sub></p>
+    <p>W<sub>m*g <sub>A->B</sub></sub> = m*g*(Δy)</p>
+    <p>W<sub>f<sub>k A->B</sub></sub> = -f<sub>k</sub> * S<sub>A->B</sub> </p>
+    <p>E<sub>k</sub> = 0.5m*v<sup>2</sup></p>
+    <p>m*g*h<sub>A</sub>+0.5m*v<sup>2</sup><sub>A</sub> = m*g*h<sub>B</sub>+0.5m*v<sup>2</sup><sub>B</sub></p>
+    <p>E<sub>m</sub> = Ug + E<sub>k</sub></p>
+
+    <p>Subscript: <sub>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789</sub></p>
+    <p>Superscript: <sup>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789</sup></p>
+    <br>
+    <label for="DimY">Dimension Y: ΣF = m * a [N]</label>
+    <textarea type="text" rows="180" id="DimY">Dimension Y: ΣF = m * aᵧ [N]</textarea>
+    <label for="DimX">Dimension X: ΣF = m * a [N]</label>
+    <textarea type="text" rows="180" id="DimX">Dimension X: ΣF = m * aₓ [N]</textarea>
+
+    <style>
+        body, html {
+            margin: 0;
+        }
+        #DimY {
+            position: absolute;
+            left: 0;
+            width: 50%;
+        }
+        #DimX {
+            position: absolute;
+            left: 50%;
+            width: 50%;
+        }
+    </style>
+</body>
+</html>
