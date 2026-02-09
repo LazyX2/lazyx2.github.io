@@ -5,35 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>הצעות חוק ותיקונים לחוק</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-        .law-proposal { background: #f9f9f9; border: 1px solid #ddd; padding: 20px; margin-top: 20px; border-radius: 8px; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .law-proposal {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
         h1, h2 { color: #2c3e50; }
-        .btn { padding: 10px 20px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 5px; }
+        #law-proposals { padding: 10px 20px; cursor: pointer; background-color: #007bff; border: none; border-radius: 5px; }
+        .law-proposals { padding: 5px 10px; cursor: pointer; background-color: #007bff; border: none; border-radius: 5px; }
     </style>
+    <script src="../scripts/law_proporsal.js"></script>
 </head>
 <body>
-    <h1>מאגר חקיקה</h1>
+    <input type="button" value="חזרה לדף הבית" onclick="window.location.href = '../index.html'">
     <p>רשימת הצעות חוק:</p>
-    
-    <input type="button" class="btn" value="הורדת נוסח התיקון המלא (txt)" onclick="window.location.href = '../assets/habkherot/leknesset/hatekon.txt'">
-
-    <div class="law-proposal">
-        <h2>הצעת חוק: הבחירה הישירה המדורגת (תיקוני חקיקה), התשפ"ו–2026</h2>
-        
-        <h3>חלק א': תיקון חוק-יסוד: הממשלה</h3>
-        <p><strong>1. שיטת הבחירה:</strong> ראש הממשלה ייבחר בבחירות ארציות וישירות בשיטת הקול המדורג הנתמך. הבוחר ידרג את המועמדים (1, 2, 3...) ויסמן עבור כל אחד מהם "כן" או "לא" (רכיב האמון).</p>
-        <p><strong>2. תנאי סף לבחירה (רף האמון):</strong> מועמד לא ייבחר אלא אם קיבל את אמונם ("כן") של 50% לפחות מכלל המצביעים שקולותיהם כשרים. מועמד שלא עבר רף זה יוסר מהספירה המדורגת.</p>
-        <p><strong>3. הכרעה בשיטת ההעברה (Instant Runoff):</strong> במידה וישנם מספר מועמדים שעברו את רף האמון, ייספרו קולות הדירוג. המועמד בעל מספר הקולות הנמוך ביותר יודח, וקולותיו יועברו למועמד הבא המדורג בפתק, עד להכרעת מנצח בעל רוב מוחלט.</p>
-        <p><strong>4. בחירות חוזרות:</strong> לא עבר אף מועמד את רף ה-50%, יתקיימו בחירות חוזרות תוך 21 יום בין שלושת המועמדים המובילים בשיעור האמון. בסיבוב זה יבוטל רף ה-50% וההכרעה תתבצע לפי הדירוג בלבד.</p>
-
-        <h3>חלק ב': תיקון חוק הבחירות לכנסת [נוסח משולב]</h3>
-        <p><strong>5. מבנה פתק ההצבעה:</strong> ועדת הבחירות המרכזית תנפיק פתק הצבעה הכולל טבלה: בעמודה הראשונה שמות המועמדים, בעמודה השנייה בחירת אמון (כן/לא) ובעמודה השלישית משבצת לדירוג מספרי.</p>
-        <p><strong>6. ענישה וטוהר הבחירות:</strong><br>
-        א. קנס כספי בסך כ-2.42 מיליון ש"ח על זיוף או הטיית רכיב האמון.<br>
-        ב. פסילת מפלגה מהתמודדות במערכת הנוכחית והבאה במקרה של מניפולציה מאורגנת.</p>
-
-        <h3>חלק ג': הוראות מעבר</h3>
-        <p><strong>7. כהונת הממשלה:</strong> בתקופת הבחירות החוזרות תמשיך לכהן הממשלה היוצאת כממשלת מעבר. הכנסת החדשה תושבע במועדה.</p>
+    <div id="law-proposals">
+        <input type="button" value="תיקון לראשות הממשלה" onclick="showLaw('../assets/law_proporsals/correctionToThePM.txt')">
+        <input type="button" value="תיקון לעילת הסבירות" onclick="showLaw('../assets/law_proporsals/correctionToTheProbabilityClause.txt')">
+        <div id="law_proporsal">
+        </div>
     </div>
+
+
 </body>
 </html>
