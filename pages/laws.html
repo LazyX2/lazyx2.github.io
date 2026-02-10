@@ -35,13 +35,13 @@
     <p>רשימת הצעות חוק:</p>
     <p>כרטיס ההצבעה (אם יש) הוא למטה יותר</p>
     <div id="law-proposals">
-        <input type="button" value="תיקון לראשות הממשלה" onclick="showLaw('../assets/law_proporsals/correctionToThePM.txt'); showCard('../assets/vote-cards/pm_vc.json');">
-        <input type="button" value="תיקון לעילת הסבירות" onclick="showLaw('../assets/law_proporsals/correctionToTheReasonabilityClause.txt'); showCard('../assets/vote-cards/justice_vc.json');">
+        <input type="button" value="תיקון לראשות הממשלה" onclick="showLaw('../assets/law_proporsals/correctionToThePM.txt', [1, 7, 13]); showCard('../assets/vote-cards/pm_vc.json');">
+        <input type="button" value="חקיקה ישירה של הממשלה" onclick="showLaw('../assets/law_proporsals/directLawPassing.txt', []); showCard('');">
+        <input type="button" value="תיקון לעילת הסבירות" onclick="showLaw('../assets/law_proporsals/correctionToTheReasonabilityClause.txt', []); showCard('../assets/vote-cards/justice_vc.json');">
+        <input type="button" value="ביטול קיומם של שרים ללא תיק" onclick="showLaw('../assets/law_proporsals/correctionToTheGovernmentForm.txt', []); showCard('');">
         <div id="law_proporsal">
         </div>
-    </div>
-    <br>
-    <div class="cards">
+        <br>
         <div id="vote-card">
         </div>
     </div>

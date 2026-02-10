@@ -24,28 +24,27 @@ async function loadJsonFile(path) {
         return null;
     }
 }
-function formatLaw(text) {
+function formatLaw(text, lst) {
     const lines = text.split("\n");
     lines[0] = "<h1>" + lines[0] + "</h1>";
     for (let i = 1; i < lines.length; i++) {
         const line = lines[i];
-        if (line.startsWith("חלק") || line.startsWith("שאלה")) {
+        if (lst.includes(i)) {
             lines[i] = "<h2>" + line + "</h2>";
-        } else if (line.match(/^\d/)) {
+        } else if (lines[i].match(/^\d/)) {
             lines[i] = "<h3>" + line + "</h3>";
         } else {
             lines[i] = "<p>" + line + "</p>";
         }
     }
     text = lines.join("");
-
     return text;
 }
-async function showLaw(law) {
+async function showLaw(law, lst) {
     const content = await loadTxtFile(law);
     const container = document.getElementById("law_proporsal");
     if (content)
-        container.innerHTML = lp_container_left + formatLaw(content) + lp_container_right;
+        container.innerHTML = lp_container_left + formatLaw(content, lst) + lp_container_right;
 }
 
 function formatCard(card) {
@@ -75,8 +74,12 @@ function formatCard(card) {
     return html;
 }
 async function showCard(card) {
-    const content = await loadTxtFile(card);
     const container = document.getElementById("vote-card");
+    if (card == "") {
+        container.innerHTML = "";
+        return;
+    }
+    const content = await loadTxtFile(card);
     if (content) {
         const card = [].concat(JSON.parse(content));
         card.keys();      
