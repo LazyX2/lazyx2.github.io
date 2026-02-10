@@ -17,22 +17,34 @@
             margin-top: 20px;
             border-radius: 8px;
         }
+        #vote-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
         h1, h2 { color: #2c3e50; }
         #law-proposals { padding: 10px 20px; cursor: pointer; background-color: #007bff; border: none; border-radius: 5px; }
-        .law-proposals { padding: 5px 10px; cursor: pointer; background-color: #007bff; border: none; border-radius: 5px; }
+        .cards {padding: 5px 10px; cursor: pointer; background-color: #0b6bff; border: none; border-radius: 5px; }
     </style>
     <script src="../scripts/law_proporsal.js"></script>
 </head>
 <body>
     <input type="button" value="חזרה לדף הבית" onclick="window.location.href = '../index.html'">
     <p>רשימת הצעות חוק:</p>
+    <p>כרטיס ההצבעה (אם יש) הוא למטה יותר</p>
     <div id="law-proposals">
-        <input type="button" value="תיקון לראשות הממשלה" onclick="showLaw('../assets/law_proporsals/correctionToThePM.txt')">
-        <input type="button" value="תיקון לעילת הסבירות" onclick="showLaw('../assets/law_proporsals/correctionToTheProbabilityClause.txt')">
+        <input type="button" value="תיקון לראשות הממשלה" onclick="showLaw('../assets/law_proporsals/correctionToThePM.txt'); showCard('../assets/vote-cards/pm_vc.json');">
+        <input type="button" value="תיקון לעילת הסבירות" onclick="showLaw('../assets/law_proporsals/correctionToTheProbabilityClause.txt'); showCard('../assets/vote-cards/justice_vc.json');">
         <div id="law_proporsal">
         </div>
     </div>
-
-
+    <br>
+    <div class="cards">
+        <div id="vote-card">
+        </div>
+    </div>
+</table>
 </body>
 </html>
